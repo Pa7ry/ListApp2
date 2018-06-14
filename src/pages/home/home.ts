@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ListasService } from './../../app/services/listas.service';
+import { NewListPage } from './../newList/newList';
 
 @Component({
   selector: 'page-home',
@@ -8,9 +9,14 @@ import { ListasService } from './../../app/services/listas.service';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController,
-              private _listasService: ListasService) {
+  constructor(private navCtrl: NavController,
+              public _listasService: ListasService) {
 
   }
 
+  newList(){
+    this.navCtrl.push(NewListPage);
+
+  }
+  
 }

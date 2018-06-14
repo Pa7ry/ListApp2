@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color='primary'>
     <ion-title>Inicio</ion-title>
   </ion-navbar>
 </ion-header>
@@ -8,7 +8,7 @@
   <h2>Mis listas</h2>
 
   <ion-card>
-    <ion-card-header>
+    <ion-card-header color='secondary'>
       En proceso
     </ion-card-header>
 
@@ -19,6 +19,10 @@
       </button>
     </ion-list>
   </ion-card>
+
+  <ion-fab right bottom (click)='newList()'>
+    <button ion-fab color="danger">  <ion-icon ios="ios-add" md="md-add"></ion-icon> </button>
+  </ion-fab>
 
   
 </ion-content>
