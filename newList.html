@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ tituloLista | placeholder: 'Título' }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Nueva lista</h1>
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-item>
+        <ion-label floating>Título</ion-label>
+        <ion-input type="text" [(ngModel)]='tituloLista' name='tituloLista'></ion-input>
+      </ion-item>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label floating>Ítem</ion-label>
+        <ion-input type="text" [(ngModel)]='item' name='item'></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-list *ngFor='let i of items' (tap)="delete()" (keyup.enter)='getItem(item)'>
+		<button ion-item>
+        		{{ i }}
+		</button>
+    </ion-list>
+    
+  </ion-card>
+
+  <button ion-item (click)='getItem(item)'>
+      Añadir
+  </button>
+
+
+</ion-content>
