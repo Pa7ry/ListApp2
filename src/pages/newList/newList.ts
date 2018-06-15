@@ -17,8 +17,11 @@ export class NewListPage {
   }
 
   getItem(item){
-    this.items.push(this.item);
-	this.item = '';
+  	if(this.item != ''){
+	    this.items.push(this.item);
+		this.item = '';
+	}
+
   }
   
    delete(item){

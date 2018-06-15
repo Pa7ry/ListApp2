@@ -32,9 +32,9 @@
 
   </ion-card>
 
-  <ion-card>
+  <ion-card *ngFor='let i of items' (press)="delete()" (keyup.enter)='getItem(item)'>
 
-    <ion-list *ngFor='let i of items' (tap)="delete()" (keyup.enter)='getItem(item)'>
+    <ion-list>
 		<button ion-item>
         		{{ i }}
 		</button>
