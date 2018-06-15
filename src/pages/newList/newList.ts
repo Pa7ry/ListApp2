@@ -33,8 +33,8 @@ export class NewListPage {
           text: 'Confirmar',
           handler: (item) => {
             console.log('Agree clicked');
-			let pos = items.indexOf(this.item);
-			items.splice(pos);
+			let pos = this.items.indexOf(this.item);
+			this.items.splice(pos);
           }
         }
       ]
