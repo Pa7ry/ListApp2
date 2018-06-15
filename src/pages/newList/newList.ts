@@ -15,8 +15,32 @@ export class NewListPage {
   }
 
   getItem(item){
-    console.log('pepito')
     this.items.push(this.item);
+	this.item = '';
   }
+  
+   delete(item){
+    const confirm = this.alertCtrl.create({
+      title: 'Eliminar item',
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Confirmar',
+          handler: (item) => {
+            console.log('Agree clicked');
+			let pos = items.indexOf(this.item);
+			items.splice(pos);
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+}
 
 }
