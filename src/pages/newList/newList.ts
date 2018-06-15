@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-newList',
@@ -10,7 +11,8 @@ export class NewListPage {
   items = [];
   item:string;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+  						public alertCtrl: AlertController) {
 
   }
 
