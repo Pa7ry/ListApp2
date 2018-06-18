@@ -8,7 +8,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class NewListPage {
 
-  items = [];
+  items:any = [];
   item:string;
 
   constructor(public navCtrl: NavController,
@@ -17,11 +17,19 @@ export class NewListPage {
   }
 
   getItem(item){
-  	if(this.item != ''){
+	if (this.item == 'Patricia') {
+		this.items.push('Patricia te quiere mucho y siempre lo hará <ion-icon ios="ios-woman" md="md-woman"></ion-icon> <ion-icon ios="ios-heart" md="md-heart"></ion-icon> <ion-icon ios="ios-man" md="md-man"></ion-icon>');
+		this.item = '';
+	} else if (this.item == 'Gianmarco') {
+		this.item.push('No olvidarme de que Patricia me ama');
+		this.item = '';
+	} else if (this.item == 'novios') {
+		this.item.push('Quererse siempre');
+		this.item = '';
+	} else if(this.item != '') {
 	    this.items.push(this.item);
 		this.item = '';
 	}
-
   }
   
    delete(item){
