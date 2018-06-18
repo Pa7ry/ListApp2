@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { NewListPage } from '../newList/newList';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 
