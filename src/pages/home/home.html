@@ -13,7 +13,7 @@
     </ion-card-header>
 
     <ion-list *ngFor='let lista of _listasService.listas'>
-      <button ion-item>
+      <button ion-item (click)='goList(this.Lista)'>
         <ion-icon name="{{ lista.icono }}" item-start></ion-icon>
         {{ lista.nombre }}
       </button>

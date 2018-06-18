@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar  color='primary'>
+    <ion-title>
+      {{ this.Lista.nombre }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+  
+   <ion-card-content>
+
+      <ion-list *ngFor='let item of _listasService.Lista'  (press)='delete(item)'>
+	  	<button ion-item>
+        		{{ item }}
+		</button>
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
